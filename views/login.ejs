@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="login hide-login">
+      <form
+        class="login-container hide-form"
+        id="logform"
+        method="POST"
+        action="/login"
+      >
+        <h1
+          id="loginform"
+          style="display: none; font-size: 35px; font-weight: 800"
+        >
+          Login
+        </h1>
+        <img
+          src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+          alt=""
+        />
+        <div class="input-container hide-section">
+          <p><input type="email" placeholder="email" name="email" /></p>
+          <p>
+            <input type="password" placeholder="Password" name="password" />
+          </p>
+          <div
+            class="button-login"
+            style="display: flex; width: 100%; justify-content: center"
+          >
+            <a href="/login"
+              ><button type="submit" value="Log in">LOG IN</button></a
+            >
+
+            <a href="/register"
+              ><button type="button" value="signin">SIGN IN</button></a
+            >
+
+          
+            <!-- <p>dont have a account</p> -->
+          </div>
+          
+          <% if(typeof errorMessage==='undefined' ) { var
+            errorMessage=null;}%> <% if (errorMessage){%>
+            <p style="color: red;"><%=errorMessage %></p>
+            <% } %>
+        </div>
+      </form>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
